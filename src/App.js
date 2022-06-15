@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import CardContainter from './components/CardContainer';
+
+const students = [
+  {
+    name: 'Martin',
+    lastName: 'Lant',
+    marks: [9, 8, null, 7, 5],
+  },
+  {
+    name: 'Francesco',
+    lastName: 'Portus',
+    marks: [5, 4, 2, 3, 2],
+  },
+  {
+    name: 'Bill',
+    lastName: 'Merdoc',
+    marks: [10, null, null, null, 10],
+  },
+  {
+    name: 'John',
+    lastName: 'Entman',
+    marks: [9, 8, 9, 7, 5],
+  },
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CardContainter students={students} />
     </div>
   );
 }
